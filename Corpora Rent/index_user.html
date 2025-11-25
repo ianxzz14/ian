@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Website Mobil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR WEBSITE RENTAL MOBIL -->
+<nav class="bg-white shadow-lg fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-car-side text-blue-600 text-3xl"></i>
+        <span class="text-2xl font-bold text-blue-700">Corpora Rent</span>
+      </div>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="index_user.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="daftar_mobil.html" class="hover:text-blue-600 transition">Daftar Mobil</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Tentang Kami</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Kontak</a></li>
+      </ul>
+
+      <!-- Auth Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <button class="px-4 py-1 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Sign In</button>
+        <button class="px-4 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+    <ul class="flex flex-col p-5 space-y-4 text-gray-700 font-medium">
+      <li><a href="#" class="block">Home</a></li>
+      <li><a href="#" class="block">Daftar Mobil</a></li>
+      <li><a href="#" class="block">Tentang Kami</a></li>
+      <li><a href="#" class="block">Kontak</a></li>
+
+      <div class="pt-4 flex gap-2">
+        <button class="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Sign In</button>
+        <button class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section class="pt-28 pb-20 bg-gray-100 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- HERO -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+          Sewa Mobil Jadi Lebih Mudah & Cepat
+        </h1>
+        <p class="text-gray-600 text-lg mb-6">
+          Temukan berbagai pilihan mobil mulai dari city car, MPV, SUV hingga mobil mewah. Proses cepat, aman,
+          dan harga transparan tanpa biaya tersembunyi.
+        </p>
+       <a href="daftar_mobil_user.html"
+          class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition text-lg font-semibold">
+          Lihat Daftar Mobil
+        </a>
+
+      </div>
+
+      <div class="flex justify-center">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/17/07/car-152795_640.png" class="w-96 drop-shadow-xl" />
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <i class="fa-solid fa-car text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Banyak Pilihan Mobil</h3>
+        <p class="text-gray-600">Sediakan banyak pilihan mobil mulai dari harian hingga bulanan.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <i class="fa-solid fa-shield-halved text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Aman dan Terpercaya</h3>
+        <p class="text-gray-600">Unit selalu dirawat, proses jelas, dan transaksi aman.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <i class="fa-solid fa-clock text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Proses Cepat</h3>
+        <p class="text-gray-600">Booking mobil hanya dalam hitungan menit tanpa ribet.</p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-20 bg-blue-600 text-white p-10 rounded-2xl shadow-lg text-center">
+      <h2 class="text-3xl font-bold mb-3">Siap Berangkat? Pesan Mobil Anda Sekarang!</h2>
+      <p class="text-white/90 mb-6">Harga terjangkau, banyak pilihan unit, dan layanan terbaik untuk perjalanan Anda.</p>
+      <button class="px-6 py-3 bg-white text-blue-700 font-semibold text-lg rounded-xl hover:bg-gray-200 transition">
+        Pesan Sekarang
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- VISI & MISI PERUSAHAAN -->
+<section class="py-20 bg-white px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Visi & Misi Perusahaan</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left mt-10">
+      <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-semibold mb-3 text-blue-700">Visi</h3>
+        <p class="text-gray-700 text-lg">
+          Menjadi penyedia layanan rental mobil terbaik dan terpercaya di Indonesia dengan layanan cepat, aman, dan profesional.
+        </p>
+      </div>
+      <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-semibold mb-3 text-blue-700">Misi</h3>
+        <ul class="text-gray-700 text-lg list-disc ml-6 space-y-2">
+          <li>Memberikan pengalaman sewa mobil yang mudah, cepat, dan nyaman.</li>
+          <li>Menyediakan pilihan mobil berkualitas dengan harga terjangkau.</li>
+          <li>Mengedepankan keamanan dan kenyamanan pelanggan.</li>
+          <li>Meningkatkan kualitas layanan secara berkelanjutan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUKTUR ANGGOTA PERUSAHAAN -->
+<section class="py-20 bg-gray-100 px-6">
+  <h2 class="text-4xl font-bold text-center text-gray-800 mb-14">
+      Struktur Anggota Perusahaan
+    </h2>
+
+    <!-- CEO -->
+    <div class="mb-16 flex justify-center">
+      <div class="bg-white shadow-xl p-8 w-full md:w-1/2 rounded-2xl hover:shadow-2xl transition text-center">
+        <img src="img/andre.jpeg"
+             class="mx-auto rounded-full w-40 h-40 object-cover mb-4" />
+        <h3 class="text-2xl font-semibold">Andrian Maulana Insani</h3>
+        <p class="text-gray-500 font-medium mb-3">CEO / Founder</p>
+        <p class="text-gray-600">
+          Bertanggung jawab penuh dalam mengelola perusahaan, membuat strategi bisnis,
+          dan memastikan operasional berjalan sesuai visi perusahaan.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Anggota lainnya -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <div class="bg-white shadow-lg p-6 rounded-2xl hover:shadow-xl transition text-center">
+        <img src="img/rafli3.jpeg"
+             class="mx-auto rounded-full w-36 h-36 object-cover mb-4" />
+        <h3 class="text-xl font-semibold">M Rafli Ali Khan</h3>
+        <p class="text-gray-500 font-medium">Direktur Utama</p>
+        <p class="text-gray-600 mt-2">
+          Mengawasi kegiatan operasional harian, memastikan proses layanan berjalan lancar,
+          serta mengelola kualitas pelayanan kepada pelanggan.
+        </p>
+      </div>
+
+      <div class="bg-white shadow-lg p-6 rounded-2xl hover:shadow-xl transition text-center">
+        <img src="img/frans2.jpeg"
+             class="mx-auto rounded-full w-36 h-36 object-cover mb-4" />
+        <h3 class="text-xl font-semibold">Francisus Munthe</h3>
+        <p class="text-gray-500 font-medium">Head Marketing</p>
+        <p class="text-gray-600 mt-2">
+          Mengatur strategi pemasaran, mengelola kampanye promosi,
+          serta meningkatkan brand awareness dan jumlah pelanggan.
+        </p>
+      </div>
+
+         <div class="bg-white shadow-lg p-6 rounded-2xl hover:shadow-xl transition text-center">
+        <img src="img/gita2.jpeg"
+             class="mx-auto rounded-full w-36 h-36 object-cover mb-4" />
+        <h3 class="text-xl font-semibold">Gita Gutawa Simamora</h3>
+        <p class="text-gray-500 font-medium">Partnership / Kemitraan</p>
+        <p class="text-gray-600 mt-2">
+         menjalin kerja sama, kemitraan, dan memperluas jaringan bisnis.fokusnya menawarkan kerja sama antar-rental, seperti berbagi unit, sistem komisi, atau saling support armada.
+      </div>
+
+      <div class="bg-white shadow-lg p-6 rounded-2xl hover:shadow-xl transition text-center">
+        <img src="img/irma2.jpeg"
+             class="mx-auto rounded-full w-36 h-36 object-cover mb-4" />
+        <h3 class="text-xl font-semibold">Irma Fitriani</h3>
+        <p class="text-gray-500 font-medium">Promotion Staff / Promo Staff</p>
+        <p class="text-gray-600 mt-2">
+     Merancang program promosi yang dapat mendorong peningkatan pembelian, misalnya bundling, cashback, atau limited-time offer.
+        </p>
+      </div>
+
+          <div class="bg-white shadow-lg p-6 rounded-2xl hover:shadow-xl transition text-center">
+        <img src="img/kinan.jpeg"
+             class="mx-auto rounded-full w-36 h-36 object-cover mb-4" />
+        <h3 class="text-xl font-semibold">Sabrina Kinanti</h3>
+        <p class="text-gray-500 font-medium">Accounting / Akuntansi</p>
+        <p class="text-gray-600 mt-2">
+        Mengelompokkan transaksi ke akun yang sesuai (aset, utang, pendapatan, biaya).Menjaga kerapihan dan akurasi data
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-blue-700 text-white py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">RentCarID</h3>
+      <p class="text-white/80">Layanan rental mobil terbaik untuk kebutuhan perjalanan Anda. Cepat, aman, dan terpercaya.</p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">Menu Cepat</h3>
+      <ul class="space-y-2 text-white/90">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Daftar Mobil</a></li>
+        <li><a href="#" class="hover:text-white">Promo</a></li>
+        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">Kontak</h3>
+      <p class="text-white/90">📍 Medan, Indonesia</p>
+      <p class="text-white/90">📞 +62 812 3456 7890</p>
+      <p class="text-white/90">✉ info@rentcarid.com</p>
+    </div>
+
+  </div>
+
+  <div class="mt-10 text-center text-white/70 text-sm">
+    © 2025 Corpora Rent • All Rights Reserved
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>

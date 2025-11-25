@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Website Mobil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR WEBSITE RENTAL MOBIL -->
+<nav class="bg-white shadow-lg fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-car-side text-blue-600 text-3xl"></i>
+        <span class="text-2xl font-bold text-blue-700">RentCarID</span>
+      </div>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="index_user.html" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="daftar_mobil.html" class="hover:text-blue-600 transition">Daftar Mobil</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Tentang Kami</a></li>
+        <li><a href="#" class="hover:text-blue-600 transition">Kontak</a></li>
+      </ul>
+
+      <!-- Auth Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <button class="px-4 py-1 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Sign In</button>
+        <button class="px-4 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+    <ul class="flex flex-col p-5 space-y-4 text-gray-700 font-medium">
+      <li><a href="#" class="block">Home</a></li>
+      <li><a href="#" class="block">Daftar Mobil</a></li>
+      <li><a href="#" class="block">Tentang Kami</a></li>
+      <li><a href="#" class="block">Kontak</a></li>
+
+      <div class="pt-4 flex gap-2">
+        <button class="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Sign In</button>
+        <button class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- SECTION: DAFTAR MOBIL -->
+<div class="max-w-7xl mx-auto px-6 pt-28">
+<h1 class="text-3xl font-bold text-gray-800 mb-6">Daftar Mobil</h1>
+
+
+<!-- Grid Mobil -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+<!-- CARD TEMPLATE -->
+<div class="bg-white shadow-lg rounded-xl overflow-hidden">
+<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d" class="w-full h-48 object-cover" />
+<div class="p-5">
+<h2 class="text-xl font-bold">Toyota Avanza</h2>
+<p class="text-gray-600 mt-1">MPV • Manual / Automatic</p>
+<p class="text-blue-600 font-semibold mt-2 text-lg">Rp 450.000 / hari</p>
+
+
+<button onclick="openBooking('Toyota Avanza', 'Rp 450.000 / hari')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition">
+Sewa Sekarang
+</button>
+</div>
+</div>
+
+
+<div class="bg-white shadow-lg rounded-xl overflow-hidden">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="w-full h-48 object-cover" />
+<div class="p-5">
+<h2 class="text-xl font-bold">Honda Brio</h2>
+<p class="text-gray-600 mt-1">City Car • Automatic</p>
+<p class="text-blue-600 font-semibold mt-2 text-lg">Rp 350.000 / hari</p>
+
+
+<button onclick="openBooking('Honda Brio', 'Rp 350.000 / hari')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition">
+Sewa Sekarang
+</button>
+</div>
+</div>
+
+
+<div class="bg-white shadow-lg rounded-xl overflow-hidden">
+<img src="https://images.unsplash.com/photo-1549921296-3c52d3f6c8f8" class="w-full h-48 object-cover" />
+<div class="p-5">
+<h2 class="text-xl font-bold">Mitsubishi Pajero</h2>
+<p class="text-gray-600 mt-1">SUV • Automatic</p>
+<p class="text-blue-600 font-semibold mt-2 text-lg">Rp 900.000 / hari</p>
+
+
+<button onclick="openBooking('Mitsubishi Pajero', 'Rp 900.000 / hari')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition">
+Sewa Sekarang
+</button>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+<!-- MODAL BOOKING -->
+<div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4">
+<div class="bg-white w-full max-w-md p-6 rounded-xl shadow-xl">
+<h2 class="text-2xl font-bold mb-4">Form Booking Mobil</h2>
+
+
+<form class="space-y-4">
+
+
+<div>
+<label class="font-semibold">Mobil yang dipilih</label>
+<input type="text" id="mobilDipilih" class="w-full p-2 border rounded-lg bg-gray-200" readonly />
+</div>
+
+
+<div>
+<label class="font-semibold">Harga</label>
+<input type="text" id="hargaMobil" class="w-full p-2 border rounded-lg bg-gray-200" readonly />
+</div>
+
+
+<div>
+<label class="font-semibold">Nama Lengkap</label>
+<input type="text" class="w-full p-2 border rounded-lg" placeholder="Masukkan nama Anda" />
+</div>
+
+
+<div>
+<label class="font-semibold">Nomor Telepon</label>
+<input type="text" class="w-full p-2 border rounded-lg" placeholder="08xxxx" />
+</div>
+
+
+<div>
+<label class="font-semibold">Tanggal Mulai</label>
+<input type="date" class="w-full p-2 border rounded-lg" />
+</div>
+
+
+<div>
+<label class="font-semibold">Tanggal Selesai</label>
+<input type="date" class="w-full p-2 border rounded-lg" />
+</div>
+
+
+<button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Kirim Booking</button>
+<button type="button" onclick="closeBooking()" class="w-full bg-gray-300 mt-2 py-2 rounded-lg">Batal</button>
+</form>
+</div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="bg-blue-700 text-white py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">Corpora Rent</h3>
+      <p class="text-white/80">Layanan rental mobil terbaik untuk kebutuhan perjalanan Anda. Cepat, aman, dan terpercaya.</p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">Menu Cepat</h3>
+      <ul class="space-y-2 text-white/90">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Daftar Mobil</a></li>
+        <li><a href="#" class="hover:text-white">Promo</a></li>
+        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-3">Kontak</h3>
+      <p class="text-white/90">📍 Medan, Indonesia</p>
+      <p class="text-white/90">📞 +62 812 3456 7890</p>
+      <p class="text-white/90">✉ info@rentcarid.com</p>
+    </div>
+
+  </div>
+
+  <div class="mt-10 text-center text-white/70 text-sm">
+    © 2025 Corpora Rent • All Rights Reserved
+  </div>
+</footer>
+<script>
+function openBooking(namaMobil, harga) {
+document.getElementById('bookingModal').classList.remove('hidden');
+document.getElementById('bookingModal').classList.add('flex');
+
+
+document.getElementById('mobilDipilih').value = namaMobil;
+document.getElementById('hargaMobil').value = harga;
+}
+
+
+function closeBooking() {
+document.getElementById('bookingModal').classList.add('hidden');
+document.getElementById('bookingModal').classList.remove('flex');
+}
+</script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>
